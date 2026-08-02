@@ -1,0 +1,217 @@
+/* =========================================================
+   Calculadora Lucro Presumido — Tema Verde & Bege
+   ========================================================= */
+
+:root {
+  --verde-escuro: #2f4a3d;
+  --verde-principal: #4a7c59;
+  --verde-claro: #8faf8d;
+  --verde-suave: #e8f0e3;
+
+  --bege-fundo: #f5f1e8;
+  --bege-card: #fdfaf3;
+  --bege-borda: #e0d5bd;
+
+  --texto-principal: #2f2b24;
+  --texto-secundario: #6b6458;
+
+  --sombra: 0 4px 16px rgba(47, 74, 61, 0.08);
+  --sombra-hover: 0 8px 24px rgba(47, 74, 61, 0.14);
+
+  --raio: 14px;
+  --transicao: all 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  font-family: "Segoe UI", "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bege-fundo) 0%, #ede6d6 100%);
+  color: var(--texto-principal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container em coluna única (blocos empilhados) */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Título principal */
+body > h2:first-of-type {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--verde-escuro);
+  margin-bottom: 36px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+body > h2:first-of-type::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--verde-principal), var(--verde-claro));
+  border-radius: 4px;
+}
+
+/* Cada bloco de cálculo */
+div {
+  background: var(--bege-card);
+  border: 1px solid var(--bege-borda);
+  border-radius: var(--raio);
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--sombra);
+  transition: var(--transicao);
+}
+
+div:hover {
+  box-shadow: var(--sombra-hover);
+  transform: translateY(-2px);
+  border-color: var(--verde-claro);
+}
+
+/* Títulos de cada bloco */
+div h2 {
+  font-size: 1.15rem;
+  color: var(--verde-escuro);
+  margin: 0 0 14px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--verde-suave);
+}
+
+/* Parágrafos informativos (alíquotas) */
+div p:not([id]) {
+  font-size: 0.88rem;
+  color: var(--texto-secundario);
+  margin: 6px 0 10px 0;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  margin: 10px 0 6px 0;
+  font-weight: 600;
+}
+
+/* Inputs de texto */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1.5px solid var(--bege-borda);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  color: var(--texto-principal);
+  transition: var(--transicao);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.15);
+}
+
+input[type="text"]::placeholder {
+  color: #b3ab98;
+}
+
+/* Select */
+select {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 12px;
+  border: 1.5px solid var(--bege-borda);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%234a7c59" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>') no-repeat right 14px center;
+  appearance: none;
+  color: var(--texto-principal);
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.15);
+}
+
+/* Botões */
+input[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--verde-principal), var(--verde-escuro));
+  color: #fdfaf3;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+input[type="button"]:hover {
+  background: linear-gradient(135deg, var(--verde-escuro), #1f3329);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(47, 74, 61, 0.25);
+}
+
+input[type="button"]:active {
+  transform: translateY(0);
+}
+
+/* Resultado (parágrafos com id, tipo #resultadoIcms, #isento, etc.) */
+div p[id] {
+  margin-top: 14px;
+  padding: 12px 16px;
+  min-height: 20px;
+  background: var(--verde-suave);
+  border-left: 4px solid var(--verde-principal);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
+
+div p[id]:empty {
+  display: none;
+}
+
+/* Responsivo */
+@media (max-width: 540px) {
+  body {
+    padding: 24px 12px;
+  }
+
+  div {
+    padding: 22px 20px;
+  }
+
+  body > h2:first-of-type {
+    font-size: 1.5rem;
+  }
+}

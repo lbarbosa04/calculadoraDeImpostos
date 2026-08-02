@@ -1,11 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucro Presumido</title>
+    <link rel="stylesheet" href="lucroPresumido.css" />
+  </head>
+  <body>
+    <h2>Memoria de Calculo - Lucro Presumido</h2>
+
+    <div>
+      <h2>Calculo ICMS</h2>
+      <p>Aliquota de ICMS no CE: 20%</p>
+      <input type="text" id="faturamentoIcms" placeholder=" Faturamento ICMS" />
+      <input type="button" value="ICMS" onclick="calculoIcms()" />
+      <p id="resultadoIcms"></p>
+      
+      <p>Credito ICMS: </p>
+      <input type="text" id="creditoIcms" placeholder="Creditos ICMS" >
+      <input type="button" value="ICMS - CREDITO" onclick="icmsCred()" >
+      <p id="cre" ></p>
+      <p id="icmsMenosCredito"></p>
+    </div>
+
+    <div>
+      <h2>calculo ISS</h2>
+      <p>Aliquota padrão ISS: 5%</p>
+      <input type="text" id="servico" placeholder="Fatuarmento ISS">
+      <input type="button" value="ISS" onclick="calculoIss()">
+      <p id="resulIss"></p>
+
+    </div>
+
+    <div>
+      <h2>Calculo PIS e COFINS</h2>
+      <p>Aliquota de PIS: 0,65%</p>
+      <input type="text" id="valorPis" placeholder="Fatuarmento PIS" />
+      <input type="button" value="PIS" onclick="calculoPis()" />
+      <p id="resultadoPis"></p>
+      <p>Aliquota de COFINS: 3,00%</p>
+      <input type="text" id="valorCofins" placeholder="faturamento COFINS" />
+      <input type="button" value="COFINS" onclick="calculoCofins()" />
+      <p id="resultadoCofins"></p>
+    </div>
+
+    <div>
+      <h2>Calculo IRPJ</h2>
+      <p>Fatuarmento do Trimestre:</p>
+      <input type="text" id="valorIrpj" placeholder="Faturamento Trimestre" />
+      <label for="atividade">Atividade:</label>
+
+      <select id="atividade">
+        <option value="comercio">comercio</option>
+        <option value="servico">servico</option>
+      </select>
+
+      <input type="button" value="IRPJ" onclick="calculoIrpj()" />
+      <p id="resulIrpj"></p>
+    </div>
+
+    <div>
+      <h2>Calculo CSLL</h2>
+      <p>Faturamento Trimestre</p>
+      <input type="text" id="valorCsll" placeholder="Faturamento Trimestre" />
+      <label for="atividade">Atividade:</label>
+
+      <select id="atividadeCsll">
+        <option value="comercio">comercio</option>
+        <option value="servico">servico</option>
+      </select>
+
+      <input type="button" value="CSLL" onclick="calculoCsll()" />
+      <p id="resulCsll"></p>
+    </div>
+
+    <div>
+      <h2>Calculo 10% produtos isentos</h2>
+      <input
+        type="text"
+        id="valorIsentos"
+        placeholder="Faturamento Produtos Isentos"
+      />
+      <input type="button" value="ISENTO" onclick="calcularIsento()" />
+      <p id="isento"></p>
+    </div>
+
+    <script src="lucroPresumido.js"></script>
+  </body>
 </html>
