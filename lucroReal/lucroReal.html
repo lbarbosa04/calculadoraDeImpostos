@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="lucroReal.css" />
+    <title>Lucro Real</title>
+  </head>
+  <body>
+    <h2>Memoria de Calculo - Lucro Real</h2>
+    <div>
+       <h2>Calculo ICMS</h2>
+         <input type="text" id="faturamentoIcms" placeholder="Valor Triutado de ICMS">
+             <p>Considerado para o calculo do credito nas compras a alíquota de 20%</p>
+         <input type="text" id="creditoIcms" placeholder="Mercadoria Com Direito a Credito">
+         <input type="button" value="FATURAMENTO - CREDITO - Credito" onclick="calculoIcms()">
+             <p id="impostoIcms"></p>
+             <p id="creditoIcmsPrint"></p>
+             <p id="icmsAPagar" ></p>
+    </div>
+
+    <div>
+      <h2>Calculo ISS</h2>
+      <input type="text" id="faturamentoIss" placeholder="Valor Tributado de ISS">
+      <p>Sua atividade tem algum Beneficio?</p>
+      <select name="reducao" id="comReducao">
+         <option value="branco"></option>
+         <option value="reducao2">Reduçao 2%</option>
+         <option value="padrao">Alíquota Padrão 5%</option>
+      </select>
+      <input type="button" value="ISS" onclick="calculoIss()">
+      <p id="resultadoIss"></p>
+    </div>
+
+    <div>
+        <h2>Calculo PIS</h2>
+          <input type="text" id="faturamentoPis" placeholder="Valor Tributado PIS">
+          <p>Considerado para o calculo do credito nas compras a alíquota de 1,65%</p>
+          <input type="text" id="creditoPis" placeholder="Mercadoria com direito a Credito">
+          <input type="button" value="FATURAMENTO - CREDITO" onclick="calculoPis()">
+          <P id="impostoPis"></P>
+          <p id="creditoPisPrint"></p>
+          <p id="pisAPagar"></p>
+    </div>
+    <div>
+        <h2>Calculo COFINS</h2>
+        <input type="text" id="faturamentoCofins" placeholder="Valor Tributado COFINS">
+        <p>Considerado para o calculo do credito nas compras a alíquota de 7,60%%</p>
+        <input type="text" id="creditoCofins" placeholder="Mercadoria com Direito a Credito">
+        <input type="button" value="FATURAMENTO - CREDITO" onclick="calculoCofins()">
+        <p id="impostoCofins"></p>
+        <p id="creditoCofinsPrint"></p>
+        <p id="impostoAPagar" ></p>
+    </div>
+
+    <div>
+      <h2>Folha De Funcionarios</h2>
+      <input type="text" id="folha" placeholder="Valor Salario dos Colaboradores">
+      <input type="button" value="SALARIOS" onclick="calculoSalario()">
+      <p id="encargos"></p>
+      <p id="resultadoSalarios"></p>
+    </div>
+
+    <div>
+      <h2>Despesas Operacionais</h2>
+      <p>Adicione o Valor Total das Suas Despesas Operacionais</p>
+      <input type="text" id="despesasOperacionais" placeholder="Ex: Energia, Água, Luz, Sistema, etc...">
+      <P>DESPESA OPERACIONAL + IMPOSTOS + ENCARGOS FOLHA</P>
+      <p id="despesasTotal"></p>
+      <input type="button" value="SOMAR TOTAL" onclick="calculoDespesas()">
+    </div>
+
+    <div>
+      <h2>Lucro Liquido (FATURAMENTO - DESPESAS)</h2>
+      <input type="text" id="faturamentoBruto" placeholder="Fatuarmento Bruto Trimestral">
+      <input type="button" value="FATURAMENTO - DEPESAS" onclick="calculoFatuarmentoDespesas()">
+      <p id="resultadoLiquido"></p>
+      <p id="prejuizo"></p>
+    </div>
+
+    <div>
+      <h2>Calculo IRPJ</h2>
+      <p>O calculo considera tributar apenas o lucro liquido</p>
+      <input type="button" value="IRPJ" onclick="calculoIrpj()">
+      <p id="irpjAdicional"></p>
+      <p id="adicional10"></p>
+      <p id="valorIrpj"></p>
+    </div>
+
+    <div>
+      <h2>Calculo CSLL</h2>
+      <p>O calculo considera tributar apenas o lucro liquido</p>
+      <input type="button" value="CSLL" onclick="calculoCsll()">
+      <p id="csllPagar"></p>
+
+    </div>
+
+  
+
+
+
+
+    
+
+
+
+    <script src="lucroReal.js" ></script>
+  </body>
+</html>
