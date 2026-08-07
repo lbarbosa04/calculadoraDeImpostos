@@ -60,18 +60,15 @@ function calculoIcms(){
      let creditoIcmsPrint = document.getElementById('creditoIcmsPrint')
 
      let icmsCalculoImposto = icmsTranformado * impostosLucroReal.ICMS
-     let icmsImposto = icmsCalculoImposto
-         resultadoAPagar.innerHTML = `ICMS: ${icmsImposto.toLocaleString('pt-Br', {style:'currency', currency:'BRL'})}`
+         resultadoAPagar.innerHTML = `ICMS: ${icmsCalculoImposto.toLocaleString('pt-Br', {style:'currency', currency:'BRL'})}`
      
      let icms20 = creditoIcmsTransformado * impostosLucroReal.ICMSCREDITO
-     let credito20 = icms20
-         creditoIcmsPrint.innerHTML = `CREDITO ICMS: ${credito20.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}`
+         creditoIcmsPrint.innerHTML = `CREDITO ICMS: ${icms20.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}`
 
-     let calculoIcmsPg = icmsImposto - credito20
-     let icmsAPagar = calculoIcmsPg
-         resultadoIcms.innerHTML=`ICMS A PAGAR: ${icmsAPagar.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
+     let calculoIcmsPg = icmsCalculoImposto - icms20
+         resultadoIcms.innerHTML=`ICMS A PAGAR: ${calculoIcmsPg.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
 
- icmsDre = icmsAPagar//O valor fica guardado fora da função para usar em outro calculo
+ icmsDre = calculoIcmsPg//O valor fica guardado fora da função para usar em outro calculo
 
 }
 
@@ -156,18 +153,15 @@ function calculoPis(){
      let resultadoImpostoPagarPrint = document.getElementById('pisAPagar')
 
      let pisCalculoImposto = pisTransformado * impostosLucroReal.PIS
-     let pisImposto = pisCalculoImposto
-     resultadoImpostoPisPrint.innerHTML = `PIS: ${pisImposto.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
+     resultadoImpostoPisPrint.innerHTML = `PIS: ${pisCalculoImposto.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
 
      let pis165 = creditoTransformado * impostosLucroReal.PISCREDITO
-     let credito165 = pis165
-     resultadoCreditoPisPrint.innerHTML = `CREDITO PIS: ${credito165.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}`
+     resultadoCreditoPisPrint.innerHTML = `CREDITO PIS: ${pis165.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}`
 
-     let calculoPisPagar = pisImposto - credito165
-     let PisAPagar = calculoPisPagar
-     resultadoImpostoPagarPrint.innerHTML = `PIS A PAGAR: ${PisAPagar.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
+     let calculoPisPagar = pisCalculoImposto - pis165
+     resultadoImpostoPagarPrint.innerHTML = `PIS A PAGAR: ${calculoPisPagar.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
 
- pisDre = PisAPagar
+ pisDre = calculoPisPagar
 
 }
 
