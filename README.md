@@ -50,7 +50,6 @@ Os regimes tributários brasileiros (Lucro Real e Lucro Presumido) possuem regra
 ## 🚀 Próximas melhorias
 
 - [ ] Adicionar responsividade para dispositivos móveis em ambas as calculadoras
-- [ ] Padronizar visual entre as duas calculadoras
 - [ ] Adicionar histórico de cálculos realizados
 - [ ] Exportar resultados em PDF
 
