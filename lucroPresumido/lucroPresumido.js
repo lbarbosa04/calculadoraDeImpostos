@@ -60,12 +60,12 @@ function icmsCred(){
     let resultadoCreditoIcms = document.getElementById('cre')
 
     let resultadoIcmsCredito = creditoIcmsTransformado * 0.20
-    resultadoCreditoIcms.innerHTML = `Imposto: ${resultadoIcmsCredito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
+    resultadoCreditoIcms.innerHTML = `Credito ICMS: ${resultadoIcmsCredito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
 
     let resulotadoIcmsMenosCredito = icmsAPagar - resultadoIcmsCredito
 
     let resultadoFinal = document.getElementById('icmsMenosCredito')
-    resultadoFinal.innerHTML = `Imposto: ${resulotadoIcmsMenosCredito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
+    resultadoFinal.innerHTML = `Imposto a pagar: ${resulotadoIcmsMenosCredito.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}`
 }
 
 //ISS
