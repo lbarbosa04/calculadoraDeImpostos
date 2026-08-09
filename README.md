@@ -22,7 +22,7 @@ git clone https://github.com/lbarbosa04/calculadoraDeImpostos.git
 Acesse a pasta da calculadora desejada:
 bash
 cd lucroReal
-# ou
+ou
 cd lucroPresumido
 Abra o arquivo index.html no navegador de sua preferência.
 
