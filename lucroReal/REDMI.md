@@ -49,7 +49,7 @@ O Lucro Real é um regime de tributação em que o cálculo dos impostos é feit
 
 > ⚠️ Este projeto tem fins educacionais e de portfólio. Os cálculos são simplificados e não substituem uma apuração fiscal profissional.
 
-## 🚀 Próximas melhorias
+## 🚀 Próximas melhorias   
 
 - [ ] Incluir responsividade para dispositivos móveis
 - [ ] Adicionar histórico de cálculos realizados

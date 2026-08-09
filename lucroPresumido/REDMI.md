@@ -18,7 +18,7 @@ A calculadora simula a apuração de tributos com base no regime de Lucro Presum
 - Interface simples e intuitiva para inserção de dados
 - Exibição do resultado detalhado por tributo
 
-## 🖥️ Como usar
+## 🖥️ Como usar  
 
 1. Clone o repositório:
 ```bash
