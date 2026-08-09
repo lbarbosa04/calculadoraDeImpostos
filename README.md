@@ -18,10 +18,10 @@ Exibição do resultado detalhado por tributo
 🖥️ Como usar
 Clone o repositório:
 bash
-git clone https://github.com/seu-usuario/calculadora-lucro-presumido.git
+git clone https://github.com/lbarbosa04/calculadoraDeImpostos.git
 Acesse a pasta do projeto:
 bash
-cd calculadora-lucro-presumido
+lucroPresumido
 Abra o arquivo index.html no navegador de sua preferência.
 
 Não é necessário instalar nenhuma dependência — o projeto roda 100% no navegador.
@@ -30,9 +30,6 @@ Não é necessário instalar nenhuma dependência — o projeto roda 100% no nav
 HTML5 — estrutura da página
 CSS3 — estilização e layout
 JavaScript — lógica de cálculo dos tributos
-📸 Demonstração
-
-(adicione aqui um print ou GIF da calculadora em funcionamento)
 
 📚 Contexto tributário
 
@@ -50,6 +47,7 @@ O Lucro Presumido é um regime de tributação simplificado, no qual a base de c
 Lucas Barbosa
 Analista Fiscal em transição para Desenvolvimento de Software
 LinkedIn
+https://www.linkedin.com/in/lucas-barbosa-177a112a9?utm_source=share_via&utm_content=profile&utm_medium=member_android
 
 📄 Licença
 
@@ -76,10 +74,10 @@ Exibição do resultado detalhado por tributo
 🖥️ Como usar
 Clone o repositório:
 bash
-git clone https://github.com/seu-usuario/calculadora-lucro-real.git
+git clone https://github.com/lbarbosa04/calculadoraDeImpostos.git
 Acesse a pasta do projeto:
 bash
-cd calculadora-lucro-real
+lucroReal
 Abra o arquivo index.html no navegador de sua preferência.
 
 Não é necessário instalar nenhuma dependência — o projeto roda 100% no navegador.
@@ -88,9 +86,6 @@ Não é necessário instalar nenhuma dependência — o projeto roda 100% no nav
 HTML5 — estrutura da página
 CSS3 — estilização e layout
 JavaScript — lógica de cálculo dos tributos
-📸 Demonstração
-
-(adicione aqui um print ou GIF da calculadora em funcionamento)
 
 📚 Contexto tributário
 
@@ -99,7 +94,6 @@ O Lucro Real é um regime de tributação em que o cálculo dos impostos é feit
 ⚠️ Este projeto tem fins educacionais e de portfólio. Os cálculos são simplificados e não substituem uma apuração fiscal profissional.
 
 🚀 Próximas melhorias
- Adicionar cálculo de adicional de IRPJ
  Incluir responsividade para dispositivos móveis
  Adicionar histórico de cálculos realizados
  Exportar resultado em PDF
@@ -108,7 +102,8 @@ O Lucro Real é um regime de tributação em que o cálculo dos impostos é feit
 Lucas Barbosa
 Analista Fiscal em transição para Desenvolvimento de Software
 LinkedIn
+https://www.linkedin.com/in/lucas-barbosa-177a112a9?utm_source=share_via&utm_content=profile&utm_medium=member_android
 
 📄 Licença
 
-Este projeto está sob a licença MIT. Sinta-se livre para utilizá-lo e adaptá-lo.
+Este projeto está sob a licença MIT. Sinta-se livre para utilizá-lo.
