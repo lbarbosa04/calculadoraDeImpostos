@@ -13,10 +13,10 @@ const aliquotasLucroPreumido = {
   presunsaoServico: 0.32, 
   presunsaoComercio: 0.08, 
   presunsaoComercioCsll: 0.12,
-  
+
 };
 
-module.exports = aliquotasLucroPreumido;
+export default aliquotasLucroPreumido;
 
 /* De acordo com a lei virgente essas são as aliquotas hoje utilizadas para apurar os impostos do Lucro Presumido*/
 
