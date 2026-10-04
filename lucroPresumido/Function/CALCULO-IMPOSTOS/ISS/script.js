@@ -1,7 +1,12 @@
 const aliquotas = require('../../../Aliquotas/script');
 
 const apuracaoIss = (faturamentoIss) =>{
-   return faturamentoIss * aliquotas.ISS;
+
+   let issAPagar = 0;
+
+   issAPagar = faturamentoIss * aliquotas.ISS;
+
+   return issAPagar; 
 
 }
 

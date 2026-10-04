@@ -1,7 +1,11 @@
 const aliquotas = require('../../../Aliquotas/script');
 
 const apuracaoCofins = (faturamentoCofins) =>{
-   return faturamentoCofins * aliquotas.COFINS;
+
+   let cofinsAPagar = 0;
+   cofinsAPagar = faturamentoCofins * aliquotas.COFINS;
+
+   return cofinsAPagar;
 
 }
 

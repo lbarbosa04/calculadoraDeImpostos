@@ -5,6 +5,7 @@ const apuracaoIrpj = (faturamentoIrpj, atividade) =>{
     let baseDeCalculoIrpj = 0;
     let valorIrpj = 0;
     let adicionalIrpj = 0;
+    let irpjAPagar
 
     if(atividade === "comercio"){
         baseDeCalculoIrpj = faturamentoIrpj * aliquotas.presunsaoComercio;
@@ -16,8 +17,10 @@ const apuracaoIrpj = (faturamentoIrpj, atividade) =>{
         adicionalIrpj = (baseDeCalculoIrpj - 60000) * aliquotas.ADICIONAL;
     }
 
-    valorIrpj = (baseDeCalculoIrpj * aliquotas.IRPJ) + adicionalIrpj;
+    valorIrpj = baseDeCalculoIrpj * aliquotas.IRPJ;
+    irpjAPagar = valorIrpj + adicionalIrpj;
 
+    return irpjAPagar;
 }
 
 module.exports = apuracaoIrpj;

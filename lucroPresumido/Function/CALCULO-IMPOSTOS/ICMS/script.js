@@ -1,12 +1,22 @@
 const aliquotas = require('../../../Aliquotas/script');
 
 const apuracaoIcms = (faturamentoIcms) =>{
-   return faturamentoIcms * aliquotas.ICMS;
+
+   let icmsAPagar = 0;
+
+   icmsAPagar = faturamentoIcms * aliquotas.ICMS;
+
+   return icmsAPagar;
 
 }
 
 const creditoIcms = (faturamentoCredito) =>{
-   return faturamentoCredito * aliquotas.ICMS;
+
+   let creditoIcmsCompras = 0;
+
+   creditoIcmsCompras = faturamentoCredito * aliquotas.ICMS;
+
+   return creditoIcmsCompras;
 
 }
 

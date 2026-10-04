@@ -1,7 +1,12 @@
 const aliquotas = require('../../../Aliquotas/script');
 
 const apuracaoPis = (faturamentoPis) =>{
-   return faturamentoPis * aliquotas.PIS;
+
+   let pisAPagar = 0;
+
+   pisAPagar = faturamentoPis * aliquotas.PIS;
+
+   return pisAPagar; 
 
 }
 

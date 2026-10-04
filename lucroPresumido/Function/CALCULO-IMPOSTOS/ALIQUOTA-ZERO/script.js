@@ -2,7 +2,11 @@ const aliquotas = require('../../../Aliquotas/script');
 
 const apuracaoAliquotaZero = (faturamentoAliquotaZero) =>{
 
-   return faturamentoAliquotaZero * aliquotas.ALIQUOTAZERO;
+   let aliquotaZeroAPagar = 0;
+
+   aliquotaZeroAPagar = faturamentoAliquotaZero * aliquotas.ALIQUOTAZERO;
+
+   return aliquotaZeroAPagar;
 
 }
 

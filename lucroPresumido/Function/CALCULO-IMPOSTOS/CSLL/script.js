@@ -13,6 +13,8 @@ const apuracaoCsll = (faturamentoCsll, atividade) =>{
    }
 
    valorCsll = baseDeCalculoCsll * aliquotas.CSLL;
+
+   return valorCsll;
    
 }
 
