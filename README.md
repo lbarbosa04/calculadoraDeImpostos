@@ -58,7 +58,3 @@ Os regimes tributários brasileiros (Lucro Real e Lucro Presumido) possuem regra
 **Lucas Barbosa**  
 Analista Fiscal em transição para Desenvolvimento de Software  
 [LinkedIn](https://www.linkedin.com/in/lucas-barbosa-177a112a9?utm_source=share_via&utm_content=profile&utm_medium=member_android)
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Sinta-se livre para utilizá-lo.

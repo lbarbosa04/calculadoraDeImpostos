@@ -1,21 +1,14 @@
 :root {
-  --verde-escuro: #2f4a3d;
-  --verde-principal: #4a7c59;
-  --verde-claro: #8faf8d;
-  --verde-suave: #e8f0e3;
-
-  --bege-fundo: #f5f1e8;
-  --bege-card: #fdfaf3;
-  --bege-borda: #e0d5bd;
-
-  --texto-principal: #2f2b24;
-  --texto-secundario: #6b6458;
-
-  --sombra: 0 4px 16px rgba(47, 74, 61, 0.08);
-  --sombra-hover: 0 8px 24px rgba(47, 74, 61, 0.14);
-
-  --raio: 14px;
-  --transicao: all 0.25s ease;
+  --verde-900: #0b2e1a;
+  --verde-700: #14532d;
+  --verde-500: #2e8b57;
+  --verde-300: #8fc9a3;
+  --verde-100: #e3f1e8;
+  --bege: #f3ead7;
+  --bege-claro: #faf5e9;
+  --texto: #14281c;
+  --borda: #c9d9c9;
+  --espaco: 1.5rem;
 }
 
 * {
@@ -24,190 +17,205 @@
 
 body {
   margin: 0;
-  padding: 40px 20px;
-  min-height: 100vh;
-  font-family: "Segoe UI", "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, var(--bege-fundo) 0%, #ede6d6 100%);
-  color: var(--texto-principal);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Container em coluna única (blocos empilhados) */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+  padding: 0 1rem 3rem;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--verde-100);
+  line-height: 1.5;
 }
 
 /* Título principal */
-body > h2:first-of-type {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--verde-escuro);
-  margin-bottom: 36px;
-  position: relative;
-  padding-bottom: 12px;
+body > header {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: var(--verde-900);
+  border-radius: 0 0 16px 16px;
+  border-bottom: 4px solid var(--verde-500);
 }
 
-body > h2:first-of-type::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--verde-principal), var(--verde-claro));
-  border-radius: 4px;
+body > header h1 {
+  margin: 0;
+  color: var(--bege);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  letter-spacing: 0.02em;
 }
 
-/* Cada bloco de cálculo */
-div {
-  background: var(--bege-card);
-  border: 1px solid var(--bege-borda);
-  border-radius: var(--raio);
-  padding: 28px 32px;
-  width: 100%;
-  max-width: 480px;
-  box-shadow: var(--sombra);
-  transition: var(--transicao);
+/* Seções: cartões lado a lado */
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto 1.75rem;
+  padding: 0 var(--espaco) var(--espaco);
+  background: var(--bege-claro);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(11, 46, 26, 0.12);
 }
 
-div:hover {
-  box-shadow: var(--sombra-hover);
-  transform: translateY(-2px);
-  border-color: var(--verde-claro);
+/* Título da seção: verde escuro */
+section > header {
+  grid-column: 1 / -1;
+  margin: 0 calc(var(--espaco) * -1) 0.25rem;
+  padding: 1rem var(--espaco);
+  background: var(--verde-900);
 }
 
-/* Títulos de cada bloco */
-div h2 {
+section > header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* Cartões flutuantes */
+section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(11, 46, 26, 0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(11, 46, 26, 0.25);
+}
+
+section h3,
+section > div > h2 {
+  margin: 0 0 0.25rem;
+  color: var(--verde-700);
   font-size: 1.15rem;
-  color: var(--verde-escuro);
-  margin: 0 0 14px 0;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--verde-suave);
 }
 
-/* Parágrafos informativos (alíquotas) */
-div p:not([id]) {
-  font-size: 0.88rem;
-  color: var(--texto-secundario);
-  margin: 6px 0 10px 0;
+p {
+  margin: 0.25rem 0 0.75rem;
 }
 
-/* Labels */
-label {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--texto-secundario);
-  margin: 10px 0 6px 0;
-  font-weight: 600;
-}
-
-/* Inputs de texto */
-input[type="text"] {
-  width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 12px;
-  border: 1.5px solid var(--bege-borda);
-  border-radius: 8px;
-  font-size: 0.95rem;
-  background: #fff;
-  color: var(--texto-principal);
-  transition: var(--transicao);
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border-color: var(--verde-principal);
-  box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.15);
-}
-
-input[type="text"]::placeholder {
-  color: #b3ab98;
-}
-
-/* Select */
+/* Campos */
+input[type="text"],
 select {
   width: 100%;
-  padding: 11px 14px;
-  margin-bottom: 12px;
-  border: 1.5px solid var(--bege-borda);
-  border-radius: 8px;
-  font-size: 0.95rem;
-  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%234a7c59" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>') no-repeat right 14px center;
-  appearance: none;
-  color: var(--texto-principal);
-  cursor: pointer;
-  transition: var(--transicao);
+  padding: 0.55rem 0.75rem;
+  margin: 0.25rem 0 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--texto);
+  background: #ffffff;
+  border: 1px solid var(--verde-300);
+  border-radius: 6px;
 }
 
+input[type="text"]:focus,
 select:focus {
-  outline: none;
-  border-color: var(--verde-principal);
-  box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.15);
+  outline: 3px solid var(--verde-300);
+  border-color: var(--verde-500);
+}
+
+label {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 600;
+  color: var(--verde-700);
 }
 
 /* Botões */
 input[type="button"] {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  margin-bottom: 4px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--verde-principal), var(--verde-escuro));
-  color: #fdfaf3;
-  font-size: 0.95rem;
+  order: 2;
+  margin-top: auto;
+  padding: 0.55rem 1.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--verde-700);
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: var(--transicao);
+  transition: background 0.2s;
 }
 
 input[type="button"]:hover {
-  background: linear-gradient(135deg, var(--verde-escuro), #1f3329);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(47, 74, 61, 0.25);
+  background: var(--verde-500);
 }
 
 input[type="button"]:active {
-  transform: translateY(0);
+  background: var(--verde-900);
 }
 
-/* Resultado (parágrafos com id, tipo #resultadoIcms, #isento, etc.) */
-div p[id] {
-  margin-top: 14px;
-  padding: 12px 16px;
-  min-height: 20px;
-  background: var(--verde-suave);
-  border-left: 4px solid var(--verde-principal);
-  border-radius: 6px;
-  font-size: 1rem;
+input[type="button"]:focus-visible {
+  outline: 3px solid var(--verde-300);
+  outline-offset: 2px;
+}
+
+/* Resultados */
+p[id] {
+  order: 1;
+  width: 100%;
+  margin-top: 0.5rem;
   font-weight: 600;
-  color: var(--verde-escuro);
+  color: var(--verde-900);
 }
 
-div p[id]:empty {
+p[id]:empty {
   display: none;
 }
 
-/* Responsivo */
-@media (max-width: 540px) {
+p[id]:not(:empty) {
+  padding: 0.6rem 0.9rem;
+  background: var(--verde-100);
+  border: 1px solid var(--verde-300);
+  border-radius: 6px;
+}
+
+/* Botão de imprimir */
+.acoes {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Impressão */
+@media print {
+  @page {
+    margin: 1cm;
+  }
+
   body {
-    padding: 24px 12px;
+    padding: 0;
+    background: #ffffff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  div {
-    padding: 22px 20px;
+  /* some o botão de imprimir e os botões de calcular */
+  .acoes,
+  input[type="button"] {
+    display: none;
   }
 
-  body > h2:first-of-type {
-    font-size: 1.5rem;
+  /* imprime só os cartões que já têm resultado */
+  section > div:not(:has(p[id]:not(:empty))) {
+    display: none;
+  }
+
+  section {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  section > div {
+    box-shadow: none;
+    break-inside: avoid;
   }
 }
