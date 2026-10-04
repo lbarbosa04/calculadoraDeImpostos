@@ -1,4 +1,4 @@
-const aliquotas = require('../../../Aliquotas/script');
+import aliquotas from '../../../Aliquotas/script.js';
 
 const apuracaoPis = (faturamentoPis) =>{
 
@@ -10,4 +10,4 @@ const apuracaoPis = (faturamentoPis) =>{
 
 }
 
-module.exports = apuracaoPis;
+export default apuracaoPis;

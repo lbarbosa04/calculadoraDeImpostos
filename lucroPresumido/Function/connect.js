@@ -1,15 +1,15 @@
-const { apuracaoIcms, icmsCredito } = require('./CALCULO-IMPOSTOS/ICMS/script');
-const iss = require('./CALCULO-IMPOSTOS/ISS/script');
-const irpj = require('./CALCULO-IMPOSTOS/IRPJ/script');
-const cofins = require('./CALCULO-IMPOSTOS/COFINS/script');
-const csll = require('./CALCULO-IMPOSTOS/CSLL/script');
-const pis = require('./CALCULO-IMPOSTOS/PIS/script');
-const aliquotaZero = require('./CALCULO-IMPOSTOS/ALIQUOTA-ZERO/script');
+import { apuracaoIcms, creditoIcms } from './CALCULO-IMPOSTOS/ICMS/script.js';
+import iss from './CALCULO-IMPOSTOS/ISS/script.js';
+import irpj from'./CALCULO-IMPOSTOS/IRPJ/script.js';
+import cofins from './CALCULO-IMPOSTOS/COFINS/script.js';
+import csll from './CALCULO-IMPOSTOS/CSLL/script.js';
+import pis from './CALCULO-IMPOSTOS/PIS/script.js';
+import aliquotaZero from './CALCULO-IMPOSTOS/ALIQUOTA-ZERO/script.js';
 
-module.exports = {
+export {
 
   apuracaoIcms,
-  icmsCredito,
+  creditoIcms,
   iss,
   irpj,
   cofins,
@@ -17,7 +17,7 @@ module.exports = {
   pis,
   aliquotaZero
 
-}
+};
 
 
 

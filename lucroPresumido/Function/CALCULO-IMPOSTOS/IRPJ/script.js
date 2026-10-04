@@ -1,4 +1,4 @@
-const aliquotas = require('../../../Aliquotas/script');
+import aliquotas from '../../../Aliquotas/script.js';
 
 const apuracaoIrpj = (faturamentoIrpj, atividade) =>{
 
@@ -23,7 +23,7 @@ const apuracaoIrpj = (faturamentoIrpj, atividade) =>{
     return irpjAPagar;
 }
 
-module.exports = apuracaoIrpj;
+export default apuracaoIrpj;
 
 /*
 A apuração do IRPJ no lucro presumido é feito da seguinte forma: 

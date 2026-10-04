@@ -1,4 +1,4 @@
-const aliquotas = require('../../../Aliquotas/script');
+import aliquotas from '../../../Aliquotas/script.js';
 
 const apuracaoIcms = (faturamentoIcms) =>{
 
@@ -20,7 +20,7 @@ const creditoIcms = (faturamentoCredito) =>{
 
 }
 
-module.exports = {apuracaoIcms, creditoIcms };
+export { apuracaoIcms, creditoIcms };
 
 /*
 ICMS é o imposto estadual, e a aliquota é 20%, então tudo que você compra e é tributado por ICMS é sobre 20%
