@@ -62,7 +62,3 @@ O Lucro Presumido é um regime de tributação simplificado, no qual a base de c
 **Lucas Barbosa**  
 Analista Fiscal em transição para Desenvolvimento de Software  
 [LinkedIn](https://www.linkedin.com/in/lucas-barbosa-177a112a9?utm_source=share_via&utm_content=profile&utm_medium=member_android)
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Sinta-se livre para utilizá-lo.
